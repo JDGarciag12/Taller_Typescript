@@ -16,11 +16,11 @@ function calcularPromedioSeasons(series) {
     series.forEach(serie => totalSeasons += serie.seasons);
     return totalSeasons / series.length;
 }
+renderPromedioSeasons(series);
 function renderPromedioSeasons(series) {
     const promedio = calcularPromedioSeasons(series);
-    const promedioElement = document.getElementById("promedio-seasons");
+    const promedioElement = document.getElementById("average-seasons");
     if (promedioElement) {
         promedioElement.textContent = `Promedio de temporadas: ${promedio.toFixed(2)}`;
     }
 }
-renderPromedioSeasons(series);
